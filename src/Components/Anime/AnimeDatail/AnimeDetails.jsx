@@ -15,7 +15,7 @@ import { SelectCharacter } from "../../../Utils/SelectCharacter";
    const characters= apiData.read();
    const character=SelectCharacter()
   return (
-    <aside className="flex justify-center items-center">
+    <aside className="flex justify-center items-center bg-gradient-to-r from-slate-950 to-slate-900 text-justify text-white h-screen">
    
         <Card className="w-full max-w-[48rem] flex-row" key={character.id}>
         <CardHeader

@@ -7,8 +7,11 @@ export const Anime = () => {
   return (
     <>
       <Layout>
-        <CardAnime></CardAnime>
+        <CardAnime>
+
+        </CardAnime>
       </Layout>
+         
     </>
      
   )
