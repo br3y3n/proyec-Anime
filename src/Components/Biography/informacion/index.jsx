@@ -1,20 +1,17 @@
-import { IconButton } from "@material-tailwind/react";
- 
-export function IconButtonCustomStyles() {
+import { CardInfo } from "./cardInfo"
+
+export function Informacion() {
+  const cardPhone= {img:"src/assets/iphone.png",  titulo:"PHONE", descripcion:"3170501796" }
+  const cardEmail={img:"src/assets/email.png", titulo:"MAIL", descripcion:"bdelgadomunoz@gmail.com"}
+  const cardWebSite={img:"src/assets/web.png", titulo:"WEBSITE", descripcion:"github.com/br3y3n"}
+  const cardLocation={img:"src/assets/location.png", titulo:"LOCATION", descripcion:"POPAYAN_CAUCA"}
   return (
-    <div className="flex gap-4">
-      <IconButton className="rounded bg-[#ea4335] hover:shadow-[#ea4335]/20 focus:shadow-[#ea4335]/20 active:shadow-[#ea4335]/10">
-        <i className="fab fa-phone text-lg" />
-      </IconButton>
-      <IconButton className="rounded bg-[#1DA1F2] hover:shadow-[#1DA1F2]/20 focus:shadow-[#1DA1F2]/20 active:shadow-[#1DA1F2]/10">
-        <i className="fab fa-mail text-lg" />
-      </IconButton>
-      <IconButton className="rounded bg-[#ea4c89] hover:shadow-[#ea4c89]/20 focus:shadow-[#ea4c89]/20 active:shadow-[#ea4c89]/10">
-        <i className="fab fa-dribbble text-lg" />
-      </IconButton>
-      <IconButton className="rounded bg-[#333333] hover:shadow-[#333333]/20 focus:shadow-[#333333]/20 active:shadow-[#333333]/10">
-        <i className="fab fa-location text-lg" />
-      </IconButton>
-    </div>
+    <article className="flex gap-32 flex-wrap max-w-4xl translate-y-36 translate-x-32">
+      <CardInfo card={cardPhone} ></CardInfo>
+      <CardInfo card={cardEmail}></CardInfo>
+      <CardInfo card={cardWebSite}></CardInfo>
+      <CardInfo card={cardLocation}></CardInfo>
+     
+    </article>
   );
 }

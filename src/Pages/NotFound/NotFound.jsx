@@ -1,5 +1,7 @@
+import { Error404 } from "../../Components/NotFound/notFound"
+
 export const NotFound = () => {
   return (
-    <div>NotFound</div>
+    <Error404/>
   )
 }

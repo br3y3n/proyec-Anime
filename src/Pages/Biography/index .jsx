@@ -1,5 +1,6 @@
 import { ImagenP } from '../../Components/Biography/imagenP'
-import { IconButtonCustomStyles } from '../../Components/Biography/informacion'
+import { InfoLateral } from '../../Components/Biography/InfoLateral'
+import { Informacion } from '../../Components/Biography/informacion'
 import { Nombre } from '../../Components/Biography/Nombre/Nombre'
 import { Layout } from '../../components/Layout'
 
@@ -7,11 +8,20 @@ export const Biography = () => {
   return (
     <>
       <Layout>
-          <div className="bg-[url('src/assets/FondoBio.jpg')] bg-cover">
-          <ImagenP></ImagenP>
+        <div className="bg-[url('src/assets/fondoBio.jpg')] bg-cover h-screen ">
+
+          <div className='flex flex-wrap'>
+
+          <ImagenP ></ImagenP>
+             
           <Nombre/>
-          <IconButtonCustomStyles/>
+              
+              
+          <Informacion > </Informacion>
+          <InfoLateral/>
           </div>
+             
+        </div>
     </Layout>
     </>
   )

@@ -5,6 +5,7 @@ import NavList from "./Components/navBar"
 import { Production } from "./Pages/Productions/Index "
 import { NotFound } from "./Pages/NotFound/NotFound"
 import { Biography } from "./Pages/Biography/index "
+import { AnimeDetails } from "./Components/Anime/AnimeDatail/AnimeDetails"
 
 
 function App() {
@@ -14,14 +15,16 @@ function App() {
       { path: "production", element: <Production/> },
       { path: "block", element: <Blocks /> },
       { path: "biography", element: <Biography/>},
+      { path: "characters/:id", element: <AnimeDetails/>},
       { path: "*", element: <NotFound/>}
     ])
     return routes
   }
+
   return (
     <BrowserRouter>
-      <AppRoutes/>
        <NavList/>
+      <AppRoutes/>
     
     </BrowserRouter>
   )
