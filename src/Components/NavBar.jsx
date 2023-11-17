@@ -18,20 +18,20 @@ function NavList() {
                 as="li"
                 variant="small"
                 color="blue-gray"
-                className="p-1 font-medium "
+                className="p-1 font-medium"
             >
                 <NavLink className={styleText} to='/'>
-                    Anime
+                    Home
                 </NavLink>
             </Typography>
             <Typography
                 as="li"
                 variant="small"
                 color="blue-gray"
-                className="p-1 font-medium"
+                className="p-1 font-medium "
             >
-                <NavLink className={styleText} to='production'>
-                    Poduction
+                <NavLink className={styleText} to='/anime'>
+                    Anime
                 </NavLink>
             </Typography>
             <Typography

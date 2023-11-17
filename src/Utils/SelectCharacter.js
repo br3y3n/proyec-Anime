@@ -6,8 +6,6 @@ export const SelectCharacter = () => {
     const id= useParams();
     let character={};
     const idd=id.id
-    console.log(idd);
-    console.log(id);
     for(let i=1;i<=characters.length;i++){
         if(i==idd){
             character=characters[i];

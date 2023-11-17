@@ -1,17 +1,15 @@
-import { fetchData } from "../../Hooks/fetchData";
-
-const apiData = fetchData('https://api.jikan.moe/v4')
-    export const AnimeList = () => {
-      const category = apiData.read();
+import {
+  Input
+} from "@material-tailwind/react";
+import { useState } from "react";
+import { SelectAnimes } from "../../Utils/SelectAnime";
+export const AnimeList = () => {
+ 
   return (
-    <div>
-      <h1>Lista de Animes Populares</h1>
-        <p>Cargando animes...</p>
-      
-        <ul>
-          por ahora np hay nada
-        </ul>
-    </div>
+
+    <>
+     <SelectAnimes></SelectAnimes>
+    </>
   );
 }
 

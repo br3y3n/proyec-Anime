@@ -1,11 +1,11 @@
+import { Welcome } from '../../Components/Home/welcome'
 import { Layout } from '../../components/Layout'
 
-export const Production = () => {
+export const Home = () => {
   return (
     <>
     <Layout>
-        Productions
-        <p>ggg</p>
+       <Welcome/>
    </Layout>
     </>
   )
