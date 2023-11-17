@@ -17,11 +17,11 @@ import { SelectCharacter } from "../../../Utils/SelectCharacter";
   return (
     <aside className="flex justify-center items-center bg-gradient-to-r from-slate-950 to-slate-900 text-justify text-white h-screen">
    
-        <Card className="w-full max-w-[48rem] flex-row" key={character.id}>
+      <Card className="w-full max-w-[48rem] flex-row  bg-gradient-to-r from-slate-950 to-slate-900" key={character.id}>
         <CardHeader
         shadow={false}
         floated={false}
-        className="m-0 w-2/5 shrink-0 rounded-r-none"
+          className="m-0 w-2/5 shrink-0 rounded-r-none  bg-gradient-to-r from-slate-950 to-slate-950"
         >
       <img
       src={character.photo}
@@ -30,13 +30,13 @@ import { SelectCharacter } from "../../../Utils/SelectCharacter";
       />
       </CardHeader>
       <CardBody className='pl-5 mt-20'>
-      <Typography variant="h6" color="gray" className="mb-4 uppercase text-3xl" children="name">
+      <Typography variant="h6" color="gray" className="mb-4 uppercase text-3xl text-slate-100" children="name">
       {character.name}
       </Typography>
-      <Typography variant="h4" color="blue-gray" className="mb-2 text-3xl"  children="roleHistory">
+      <Typography variant="h4" color="blue-gray" className="mb-2 text-3xl text-slate-100"  children="roleHistory">
       {character.role_history}
       </Typography>
-        <Typography color="gray" className="mb-8 font-serif text-lg text-justify" children="descriptio">
+        <Typography color="gray" className="mb-8 font-serif text-lg text-justify text-slate-100" children="descriptio">
          {character.description}
           </Typography>
           </CardBody>

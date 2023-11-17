@@ -8,7 +8,6 @@ export const Anime = () => {
     <>
       <Layout>
         <CardAnime>
-
         </CardAnime>
       </Layout>
          

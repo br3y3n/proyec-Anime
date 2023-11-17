@@ -26,7 +26,7 @@ import {
         </CardHeader>
         <CardBody className="p-4">
           <div className="mb-2 flex items-center justify-between">
-            <Typography color="blue-gray" className="font-medium text-2xl">
+            <Typography color="blue-gray" className="font-medium text-2xl text-slate-200">
               {anime.name}
             </Typography>
             
@@ -34,21 +34,21 @@ import {
           <Typography
             variant="small"
             color="gray"
-            className="font-normal opacity-75 text-lg"
+            className="font-normal opacity-75 text-lg text-slate-200"
             >
             {anime.director}
           </Typography>
           <Typography
             variant="small"
             color="gray"
-            className="font-normal opacity-75 text-lg"
+            className="font-normal opacity-75 text-lg text-slate-200"
             >
             {anime.id_studio.name}
           </Typography>
           <Typography
             variant="small"
             color="gray"
-            className="font-normal opacity-75 text-lg"
+            className="font-normal opacity-75 text-lg text-slate-200"
             >
             {anime.genre}
           </Typography>
