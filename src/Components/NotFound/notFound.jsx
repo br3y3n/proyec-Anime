@@ -2,6 +2,7 @@ import React from 'react'
 
 export const Error404 = () => {
   return (
+	//page to show error 404
 <section>
 	<div class="bg-black text-white">
 		<div class="flex h-screen">

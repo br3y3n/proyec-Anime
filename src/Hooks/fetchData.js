@@ -1,3 +1,4 @@
+//function to suspend API call
 const getSuspender = (promise) => {
     let status = "pending";
     let response;
@@ -12,7 +13,7 @@ const getSuspender = (promise) => {
         response = err;
       }
     );
-  
+// function to read the status of the API call
     const read = () => {
       switch (status) {
         case "pending":

@@ -1,22 +1,16 @@
-
-import React, { Suspense } from "react";
-
 import {
     Card,
     CardHeader,
     CardBody,
     Typography,
   } from "@material-tailwind/react";
-  
-import { fetchData } from "../../../Hooks/fetchData";
 import { SelectCharacter } from "../../../Utils/SelectCharacter";
-  const apiData = fetchData('https://kaoxdc.pythonanywhere.com/api-ficha2669739/Character/')
   export const AnimeDetails = () => {
-   const characters= apiData.read();
    const character=SelectCharacter()
   return (
+  //card to show more information about the character
     <aside className="flex justify-center items-center bg-gradient-to-r from-slate-950 to-slate-900 text-justify text-white h-screen">
-   
+
       <Card className="w-full max-w-[48rem] flex-row  bg-gradient-to-r from-slate-950 to-slate-900" key={character.id}>
         <CardHeader
         shadow={false}

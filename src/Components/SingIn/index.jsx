@@ -2,6 +2,7 @@ import React from 'react';
 
 export default function SingIn() {
     return (
+//Registration Form
         <aside className="bg-[url('src/assets/fondoHomee.jpeg')] bg-cover h-screen ">
         <div className="relative flex flex-col justify-center min-h-screen overflow-hidden -translate-x-72 -translate-y-40 top-44">
             <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl shadow-slate-50 lg:max-w-xl">

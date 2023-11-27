@@ -12,6 +12,7 @@ import NavList from "./Components/NavBar"
 
 
 function App() {
+  //routes for use all app
   const AppRoutes = () => {
     let routes = useRoutes([
       { path: "/", element:<Home/>},

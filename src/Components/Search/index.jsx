@@ -13,12 +13,14 @@ const apiData = fetchData('https://api.jikan.moe/v4/anime')
 export const SelectAnimes = () => {
     let animes = apiData.read();
     const name = apiData.read();
+//function to capture what the user is entering
     const [search, setSearch] = useState();
     const handleChange = (event) => {
         setSearch(event.target.value);
         searchAnime(event.target.value)
     };
     console.log(search);
+//function to compare the anime that the user entered with the one in the data
     const searchAnime = (nameAnimee) => {
         let animeselect = name.data.map((selectAnime) => {
             if (selectAnime.title == nameAnimee) {
@@ -30,6 +32,7 @@ export const SelectAnimes = () => {
     }
     console.log(animes);
     return (
+//card to search animes
         <>
             <form>
 

@@ -5,6 +5,7 @@ import { Layout } from '../../components/Layout'
 export const Anime = () => {
   
   return (
+    //anime main page
     <>
       <Layout>
         <CardAnime>

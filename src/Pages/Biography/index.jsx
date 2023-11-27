@@ -6,6 +6,7 @@ import { Layout } from '../../components/Layout'
 
 export const Biography = () => {
   return (
+    //pages for Biography
     <>
       <Layout>
         <div className="bg-[url('src/assets/fondoBio.jpg')] bg-cover h-screen ">

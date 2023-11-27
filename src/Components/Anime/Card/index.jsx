@@ -14,6 +14,7 @@ import {
   export function CardAnime() {
     const animes = apiData.read();
     return (
+      //car to show the animes
       <aside className="flex flex-wrap justify-evenly pt-8 bg-gradient-to-r from-slate-950 to-slate-900">
     {animes.map((anime) =>
       <Card className="w-72  text-white mb-5 bg-slate-800 rounded-lg hover:scale-90 transition duration-200" key={anime.id}>
@@ -59,6 +60,7 @@ import {
             fullWidth={true}
             className="bg-cyan-600 text-slate-950 rounded-none font-semibold text-lg shadow hover:scale-105 hover:shadow focus:scale-110 focus:shadow active:scale-100 mb-5"
             >
+{/*When the user clicks, the user will show more information about that character.*/}
                <Link to={`characters/${anime.id}`}>
             Look More
                </Link>

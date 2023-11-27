@@ -2,7 +2,8 @@ import { fetchData } from "../Hooks/fetchData"
 import { useParams } from "react-router-dom";
 const apiData = fetchData('https://kaoxdc.pythonanywhere.com/api-ficha2669739/Character/')
 export const SelectCharacter = () => {
-    const characters= apiData.read();
+    //function to show the anime depending on where the user clicked
+      const characters= apiData.read();
     const id= useParams();
     let character={};
     const idd=id.id
