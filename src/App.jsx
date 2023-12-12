@@ -5,7 +5,7 @@ import { AnimeDetails } from "./Components/Anime/AnimeDatail"
 import { Search } from "./Pages/Search/Index"
 import { Biography } from "./Pages/Biography"
 import { NotFound } from "./Pages/NotFound"
-
+import { Crud } from "./Components/Crud"
 import NavList from "./Components/NavBar"
 
 
@@ -20,6 +20,7 @@ function App() {
       { path: "block", element: <Search/> },
       { path: "biography", element: <Biography /> },
       { path: "anime/characters/:id", element: <AnimeDetails/>},
+      { path: "crud", element: <Crud/>},
       { path: "*", element: <NotFound /> }
     ])
     return routes

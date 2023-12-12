@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 
 
 function NavList() {
-    const styleText = "flex items-center hover:text-cyan-400 transition-colors text-2xl "
+    const styleText = "flex items-center hover:text-cyan-400 transition-colors text-2xl focus:text-cyan-400"
 
     return (
         <nav>
@@ -56,6 +56,17 @@ function NavList() {
                         Biography
                     </NavLink>
                 </Typography>
+                <Typography
+                    as="li"
+                    variant="small"
+                    color="blue-gray"
+                    className="pt-1 font-medium"
+                >
+                    <NavLink className={styleText} to='crud'>
+                        Crud
+                    </NavLink>
+                </Typography>
+               
             </ul>
         </nav>
     );
