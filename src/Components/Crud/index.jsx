@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { Card, Typography } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
-import { AnimeUpdate } from './Update';
+import { AnimeCreate } from './Create';
 const TABLE_HEAD = ["Name", "Director", "Update", "Delate"];
 
 export const Crud = () => {
@@ -11,7 +11,6 @@ export const Crud = () => {
   const consumo = async () => {
     try {
       const response = await axios.get('http://localhost:4000/api/Anime/readAnime')
-      console.log(response)
       const data = response.data;
       setanimes(data)
     } catch (error) {
@@ -21,14 +20,13 @@ export const Crud = () => {
   useEffect(() => {
     consumo();
   }, []);
-  console.log(animes)
   return (
     <>
         <Typography as="a" href="#" variant="small" color="blue-gray" className="font-medium">
           <h1>ADD ANIME</h1>
           <img src="src/assets/create.png" alt="" onClick={handleClick} />
         </Typography>
-        {showForm && <AnimeUpdate onClose={() => setShowForm(false)} />}
+        {showForm && <AnimeCreate onClose={() => setShowForm(false)} />}
       <Card className="h-full w-full overflow-scroll bg-gradient-to-r from-stone-100 to-stone-200 ">
         <table className="w-full min-w-max table-auto text-left " >
           <thead>
@@ -46,8 +44,13 @@ export const Crud = () => {
               ))}
             </tr>
           </thead>
-          {animes && animes.Anime.map(({ _id, name, genre, director }) => (
+          {animes && animes.Anime.map(({ _id, name, director }) => (
             <tbody key={_id} >
+              <td className="p-4">
+                  <Typography variant="small" color="blue" className="font-normal">
+                    {_id}
+                  </Typography>
+                </td>
               <tr className="hover:bg-gray-400 text-xl ">
                 <td className="p-4">
                   <Typography variant="small" color="blue" className="font-normal">
