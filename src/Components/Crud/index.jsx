@@ -2,6 +2,8 @@ import axios from 'axios'
 import { Card, Typography } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 import { AnimeCreate } from './Create';
+import { Link } from 'react-router-dom';
+import { AnimeDelete } from './Delate';
 const TABLE_HEAD = ["Name", "Director", "Update", "Delate"];
 
 export const Crud = () => {
@@ -46,11 +48,6 @@ export const Crud = () => {
           </thead>
           {animes && animes.Anime.map(({ _id, name, director }) => (
             <tbody key={_id} >
-              <td className="p-4">
-                  <Typography variant="small" color="blue" className="font-normal">
-                    {_id}
-                  </Typography>
-                </td>
               <tr className="hover:bg-gray-400 text-xl ">
                 <td className="p-4">
                   <Typography variant="small" color="blue" className="font-normal">
@@ -63,14 +60,16 @@ export const Crud = () => {
                   </Typography>
                 </td>
                 <td className="p-4">
-                  <Typography as="a" href="#" variant="small" color="blue-gray" className="font-medium">
+                  <Typography as="a" href="#" variant="small" color="blue-gray" className="font-medium" onClick={handleClick}>
+                    
+                    <Link to={`animeUpdate/${_id}`}>
                     Edit
+                    </Link> 
+                    
                   </Typography>
                 </td>
                 <td className="p-4">
-                  <Typography as="a" href="#" variant="small" color="blue-gray" className="font-medium">
-                    <img src="src/assets/delete.png" alt="" className='w-12' />
-                  </Typography>
+                  <AnimeDelete id={_id}></AnimeDelete>
                 </td>
               </tr>
             </tbody>
