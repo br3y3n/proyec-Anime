@@ -4,11 +4,13 @@ import { useEffect, useState } from "react";
 import { AnimeCreate } from './Create';
 import { Link } from 'react-router-dom';
 import { AnimeDelete } from './Delate';
+import { Alert } from '../Alerts';
 const TABLE_HEAD = ["Name", "Director", "Update", "Delate"];
 
 export const Crud = () => {
   const [animes, setanimes] = useState(null)
   const [showForm, setShowForm] = useState(false);
+  const [alert, setAlert] = useState({})
   const handleClick = () => setShowForm(true);
   const consumo = async () => {
     try {
@@ -24,11 +26,12 @@ export const Crud = () => {
   }, []);
   return (
     <>
-        <Typography as="a" href="#" variant="small" color="blue-gray" className="font-medium">
-          <h1>ADD ANIME</h1>
+        <Typography variant="small" color="blue-gray" className="font-medium">
+          ADD ANIME
           <img src="src/assets/create.png" alt="" onClick={handleClick} />
         </Typography>
         {showForm && <AnimeCreate onClose={() => setShowForm(false)} />}
+
       <Card className="h-full w-full overflow-scroll bg-gradient-to-r from-stone-100 to-stone-200 ">
         <table className="w-full min-w-max table-auto text-left " >
           <thead>
@@ -60,7 +63,7 @@ export const Crud = () => {
                   </Typography>
                 </td>
                 <td className="p-4">
-                  <Typography as="a" href="#" variant="small" color="blue-gray" className="font-medium" onClick={handleClick}>
+                  <Typography variant="small" color="blue-gray" className="font-medium" onClick={handleClick}>
                     
                     <Link to={`animeUpdate/${_id}`}>
                     Edit

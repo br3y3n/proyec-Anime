@@ -6,29 +6,31 @@ import {
 } from "@material-tailwind/react";
 import { useState } from "react";
 import { Link, useParams } from 'react-router-dom';
+import { Alert } from '../../Alerts';
 export const AnimeUpdate = () => {
   const [name, setName] = useState('')
   const [genre, setGenre] = useState('')
   const [director, setDirector] = useState('')
   const [studio, setStudio] = useState('')
   const {id}= useParams();
+  const [alert, setAlert] = useState({})
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if ([name, genre, director, studio].includes('')) {
-      console.log("there are empty fields");
+      setAlert({msg:"there are empty fields", error:true, isVisible:true})
       return;
     }
 
     try {
       const res = await axios.patch(`http://localhost:4000/api/Anime/modifyAnime/${id}`, { name, genre, director, studio });
       console.log(res.data);
-      console.log("data changed successfully")
+      setAlert({msg:"Data changed successfully", error:false, isVisible:true})
     } catch (error) {
       console.error(error);
       if (error.response.data.msg == 'anime already exists') {
-        console.log('anime already exists')
+        setAlert({msg:'anime already exists', error:false, isVisible:true})
       }
     }
   };
@@ -38,11 +40,11 @@ export const AnimeUpdate = () => {
     <Card color="transparent" shadow={false}
     className='flex items-center'
     >
-     
       <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96  p-5"  onSubmit={handleSubmit}>
       <Typography className='text-xl mb-5'>
         UPDATE ANIME
       </Typography>
+     <Alert alert={alert}/>
         <div className="mb-1 flex flex-col gap-6">
           <Typography variant="h6" color="blue-gray" className="-mb-3">
             Name
